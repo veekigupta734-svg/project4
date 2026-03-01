@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raj Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>Raj Portfolio</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#todo">To-Do</a></li>
+        <li><a href="#products">Products</a></li>
+    </ul>
+</nav>
+
+<!-- ABOUT -->
+<section id="about">
+    <h1>Hello, I'm Veekic 👋</h1>
+    <p>Data Science & Web Development Enthusiast skilled in Python, SQL and JavaScript.</p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="grid">
+        <div class="card">Titanic EDA Project</div>
+        <div class="card">Student Record Analyzer</div>
+        <div class="card">Portfolio Website</div>
+    </div>
+</section>
+
+<!-- TODO APP -->
+<section id="todo">
+    <h2>To-Do List (Local Storage)</h2>
+
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button onclick="addTask()">Add</button>
+
+    <ul id="taskList"></ul>
+</section>
+
+<!-- PRODUCT LIST -->
+<section id="products">
+    <h2>Product Listing</h2>
+
+    <select id="filter" onchange="filterProducts()">
+        <option value="all">All</option>
+        <option value="tech">Tech</option>
+        <option value="book">Books</option>
+    </select>
+
+    <select onchange="sortProducts(this.value)">
+        <option value="default">Sort</option>
+        <option value="low">Price Low → High</option>
+        <option value="high">Price High → Low</option>
+    </select>
+
+    <div id="productContainer" class="grid"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
